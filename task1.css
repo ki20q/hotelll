@@ -1,0 +1,75 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.main{
+    min-height: 10vh;
+    background-color: rgb(80, 202, 202);
+    display: flex;
+    justify-content: space-between;
+}
+.cont1{
+    color: black;
+    font-size: 30px;
+    padding: 20px;
+}
+.cont2{
+    color: aliceblue;
+    display: flex;
+    gap: 20px;
+}
+.cont2>p{
+    padding: 20px;
+    padding-top: 35px;
+}
+.cont2 p:hover{
+    background-color: aqua;
+}
+.font{
+    position: fixed;
+    top: 20px;
+    /* color: blue; */
+    /* background: chartreuse; */
+    right: 50px;
+    display: none;
+}
+.ch{
+    display: none;
+}
+@media screen and (min-width:320px) and (max-width:800px) {
+    .main{
+        flex-direction: column;
+    }
+    .cont1{
+        padding-top: 10px;
+        /* border: 5px groove black; */
+    }
+    .cont2{
+        position: fixed;
+        height: 100vh;
+        flex-direction: column;
+        font-size: 50px;
+        background-color: aqua;
+        color: black;
+        /* left: -200%; */
+    }
+    .cont2 p{
+        width: 100%;
+        padding-left: 40%;
+    }
+    .font{
+        display: unset;
+        font-size: 50px;
+    }
+    .ch{
+        display: unset;
+        position: absolute;
+        top: 40px;
+        right: 20px;
+        left: 40px;
+    }
+    input:checked~.cont2{
+        left: 0;
+    }
+}
